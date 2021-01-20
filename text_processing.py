@@ -34,8 +34,13 @@ def normalize(input_string):
              'extra space'
     """
     normalized_string = None
-    return normalized_string
 
+    temp = input_string
+    lowered_word = temp.lower()
+    splitted_word = lowered_word.split()
+    print(splitted_word)
+    normalized_string =" ".join(splitted_word)
+    return normalized_string
 
 def no_vowels(input_string):
     """
@@ -59,4 +64,10 @@ def no_vowels(input_string):
             ''W lv Pythn!'
     """
     no_vowel_string = None
+    vowel = ['a','e','i','o','u','A','E','I','O','U']
+    changed_string = input_string
+    for v in vowel:
+        changed_list = changed_string.split(v)
+        changed_string = "".join(changed_list)
+    no_vowel_string=changed_string
     return no_vowel_string
